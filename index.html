@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Progress Bar</title>
+	<link rel="stylesheet" type="text/css" href="style/progress.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="progress_holder" id="progress_bar">
+	</div>
+</div>
+
+<div class="button blue" id="start">Start Animation</div>
+<div class="button red" id="stop">Stop Animation</div>
+
+<script type="text/javascript" src="script/progress.js"></script>
+<script type="text/javascript">
+	var l = new loader();
+	var start = document.getElementById("start");
+	var stop = document.getElementById("stop");
+
+	start.addEventListener("click", function () {
+		this.dispatchEvent(l.startAnimation);
+	});
+
+	stop.addEventListener("click", function () {
+		this.dispatchEvent(l.stopAnimation);
+	});
+</script>
+
+</body>
+</html>
